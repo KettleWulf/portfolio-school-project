@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background: #e4d4e3; /* Läste att man alltid måste ha en back-up om webbläsaren inte klarar linea-gradient */
+  background: linear-gradient(to bottom, #FFEDBC, #482f53);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+/* Navigering start */
+.navbar {
+  display: flex;
+  position: relative;
+  color: azure;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background-color: #333;
+}
+
+.navLinks {
+  display: none;
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  top: 57px;
+  z-index: 999;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(35, 35, 39, 0.61);
+}
+
+.navLinks a:hover {
+  font-weight: bold;
+}
+
+/* .showMenu läggs till på .navLinks genom JS-kommando och skriver över "display:none" ovan med "display:flex" - vilket visar menyn "under" nav-menyn */
+.showMenu .navLinks {
+  display: flex;
+}
+/* Navigering slut */
+
+
+/* Hero Start */
+body, html {
+  height: 100%;
+}
+
+.heroImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("IMG/heroCrystal.jpg");
+
+  height: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.heroText {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.heroButton {
+  background-color: rgba(214, 214, 194, 0.541);
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.heroButton:hover {
+  background-color: rgba(214, 214, 194, 0.603);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: rgb(61, 53, 117) 1px 0 10px;
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* Hero slut */
+
+/* En "body" främst för att motverka att innehållet "smetas ut" för mycket vid stora skärmar */
+.divBody {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+
+/* Pitch-artiklar start */
+.pitchBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pitchItem {
+  background-color: rgba(255, 255, 255, 0.288);
+  color: azure;
+  text-shadow: rgb(69, 68, 77) 1px 0 10px;
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0.2rem;
+}
+
+hr {
+  color: azure;
+  background-color: azure;
+}
+
+
+/* Skill-boxar start */
+.skillBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  gap: 0.5rem;
+}
+
+/* Lägger varannan bild, nummer 2 och 4, till vänster */
+.skillBox > :nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.skillItem {
+  background-color: rgba(144, 150, 153, 0.288);
+  color: #323635;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.skillItem > div {
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.imgBox {
+  background-color: rgba(217, 233, 227, 0.575);
+  border-radius: 30px;
+  height: 200px;
+  align-items: center;
+
+}
+
+.skillIMG {
+  width: 100px;
+}
+
+
+/* Bloggar start - nytt försök med grid! Lärt mig att jag hatar det och älskar flex */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 2fr 1fr;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "blogFirst"
+    "blogSecond"
+    "sidebar";
+}
+
+.grid > * {
+  text-align: center;
+  color: azure;
+  text-shadow: rgb(69, 68, 77) 1px 0 10px;
+}
+
+.blogFirst {
+  grid-area: blogFirst;
+  background-color: rgba(112, 128, 144, 0.445);
+  border-radius: 10px 10px 0 0;
+}
+
+.blogSecond {
+  grid-area: blogSecond;
+  background-color: rgba(112, 128, 144, 0.507);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(249, 252, 255, 0.664);
+  border-radius: 0 0 10px 10px;
+}
+
+.blogHeader {
+  background-color: rgba(75, 17, 87, 0.281);
+  padding: 1rem;
+  margin-top: 0;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.blogIMG {
+  width: 400px;
+}
+
+.blogText {
+  background-color: rgba(75, 17, 87, 0.281);
+  padding: 1rem;
+  margin-bottom: 0;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.blogList {
+  list-style-type: none;
+  background-color: rgba(147, 151, 137, 0.281);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  padding: 1rem;
+}
+
+.blogList li {
+ line-height: 150%;
+ text-align: center;
+}
+
+.blogList li:hover {
+  font-weight: bold;
+}
+
+
+/* Formulär start */
+.formBox {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+form {
+  width: 90%;
+  color: azure;
+  text-shadow: rgb(69, 68, 77) 1px 0 10px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.formPadding {
+  padding-top: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 15px 15px 0 0;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.formButton {
+  background-color: rgb(194, 194, 0);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.8;
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+
+}
+
+.formButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  opacity: 1;
+}
+/* formulär slut */
+
+
+/* Sidfot start */
+.footerBox {
+  height: 200px;
+  background-color: #33333367;
+  color: azure;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerLeft {
+  width: 50%;
+  text-align: left;
+  padding-right: 1rem;
+  line-height: 150%;
+}
+
+.footerLeft p {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+/* Innehållet tog för mycket plats i mobil-läge så den dyker upp i desktop-läge */
+.footerKaffe {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.footerButton {
+  background-color: rgb(194, 194, 0);
+  border: none;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  opacity: 0.9;
+  width: 50%;
+}
+
+.footerButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  opacity: 1;
+}
+
+.footerRight {
+  width: 50%;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.adress {
+  list-style-type: none;
+  line-height: 150%;
+}
+
+i:hover {
+  font-size: 105%;
+  color: azure;
+  text-shadow: rgb(59, 56, 63) 1px 0 10px;
+}
+
+.footerFoot {
+  background-color: #333;
+  width: 100%;
+  color: azure;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.footerSocials {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  min-height: 50px;
+  padding: 1rem 0;
+}
+
+.footerSocials i {
+  text-decoration: none;
+  color: rgba(248, 248, 248, 0.801);
+  cursor: pointer;
+}
+
+.footerSocials i:hover {
+  color: rgba(240, 255, 255, 0.932);
+}
+
+
+
+/* Samlade mediafrågor här för att säkerställa att jag hade tre brytpunkter - i framtida projekt skulle jag nog lägga relevanta mediafrågor under varje sektion */
+
+/* Ipad ståendes */
+@media screen and (min-width: 600px) {
+  .heroButton {
+    width: 50%;
+  }
+
+  /* Visar navigeringslänkarna högst upp till höger */
+  .navLinks {
+    display: flex;
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    padding: 0 1rem;
+    justify-content: end;
+    background-color: #333;
+  }
+
+  /* Gömmer "hamburgaren" */
+  .hamburgerMenu {
+    display: none;
+  }
+}
+
+
+/* Ipad liggandes */
+@media screen and (min-width: 900px) {
+  .pitchItem {
+    width: 32%;
+  }
+
+  .skillItem {
+    width: 49%;
+  }
+
+  /* Justerar bloggarna-sektionen så att sidopanelen lägger sig till vänster */
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "blogFirst sidebar"
+      "blogSecond sidebar";
+  }
+
+  .blogFirst {
+    grid-area: blogFirst;
+    background-color: rgba(170, 131, 175, 0.26);
+    border-radius: 50px 0 0 0;
+  }
+
+  .blogSecond {
+    grid-area: blogSecond;
+    background-color: rgba(170, 131, 175, 0.26);
+    border-radius: 0 0 0 50px;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: rgba(131, 166, 175, 0.507);
+    border-radius: 0 150px 150px 0;
+    padding: 5rem;
+  }
+
+  .blogList {
+    padding: 2rem 2rem 4rem 1rem;
+  }
+
+  .blogList li {
+  text-align: left;
+  }
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  form {
+    max-width: 70%;
+  }
+
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+/* Höger och vänster-box i sidfoten gör plats för center-boxen */
+  .footerBox > div {
+    width: 30%
+  }
+
+  /* Centerboxen dyker upp i mitten av sidfoten */
+  .footerKaffe {
+    display: block;
+  }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b9d1bf5663.js" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Olle Wistedt -->
+
+  <!-- Navigeringsmeny -->
+  <header>
+    <nav id="nav" class="navbar">
+      <a><b>WIZKID</b></a>
+      <div class="navLinks">
+        <a href="#pitch">Om mig</a>
+        <a href="#skill">Verktyg</a>
+        <a href="#news">Händelser</a>
+      </div>
+      <a class="hamburgerMenu" onclick="toggle()"><i class="fa fa-bars"></i></a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="heroImage">
+    <div class="heroText">
+      <h1>WIZKID / Olle Wistedt</h1>
+      <h4>Let's make Magic Happen</h4>
+      <a href="#form" class="heroButton">Abracadabra!</a>
+    </div>
+  </div>
+
+  <div class="divBody">
+
+    <!-- Säljande innehåll x 3 -->
+    <section class="pitchBox" id="pitch">
+      <div class="pitchItem">
+        <h3>Teknisk expertis och kreativ problemlösning:</h3>
+        <hr>
+        <p>Som Front End Developer kombinerar jag min tekniska kunskap med förmågan att lösa dina problem på ett
+          kreativt
+          sätt. Jag behärskar HTML, CSS och JavaScript, men också förmågan att använda moderna ramverk som
+          React och Vue.js - med dessa verktyg och många andra bygger jag robusta och användarvänliga gränssnitt,
+          vilket resulterar i smidiga och engagerande uppleverlse för era användare.</p>
+      </div>
+      <div class="pitchItem">
+        <h3>Användarcentrerad design och UX-förståelse:</h3>
+        <hr>
+        <p>Mitt fokus ligger alltid på slutanvändaren. I min förståelse för UX och UI-principer är min målsättning att
+          leverera gränssnitt som är både estetiskt tilltalande och
+          funktionella. För att möjliggöra detta arbetar jag nära med designers och produktteamet för att säkerställa
+          att varje
+          komponent inte bara ser bra ut utan också är enkel att använda och intuitiv för användarna.</p>
+      </div>
+      <div class="pitchItem">
+        <h3>Samarbetsförmåga och kommunikation:</h3>
+        <hr>
+        <p>Jag brinner för god kommunikation samarbete och uttrycker tydligt mina idéer och tekniska behov till andra
+          utvecklare så väl som icke-tekniska
+          kollegor. Dessutom värdesätter jag förmågan att ge och ta emot feedback högt - för att mina projekt ska
+          utvecklas i rätt riktning och i sin tur
+          leda till bättre slutresultat och effektivare arbetsprocesser.</p>
+      </div>
+    </section>
+
+    <!-- Förmågor x 4 -->
+    <section class="skillBox" id="skill">
+      <div class="skillItem">
+        <div>
+          <h3>HTML</h3>
+          <p>Jag har en solid kunskap i HTML och förstår dess grundläggande struktur och semantiska betydelse. Genom att
+            använda rätt taggar och attribut kan jag bygga välorganiserade och tillgängliga webbsidor. Jag är bekant med
+            HTML5 och dess nya funktioner, vilket gör att jag kan implementera multimediaelement och formulär på ett
+            effektivt sätt. Min erfarenhet av att skapa responsiva layouter gör att jag kan optimera användarupplevelsen
+            på olika enheter.</p>
+        </div>
+        <div class="imgBox">
+          <img class="skillIMG" src="IMG/HTML5_logo.svg.png" alt="Bild på HTML5-loggan.">
+        </div>
+      </div>
+      <div class="skillItem">
+        <div>
+          <h3>CSS</h3>
+          <p>Mina färdigheter inom CSS gör att jag kan skapa stiliga och responsiva designlösningar som anpassar sig
+            till olika skärmstorlekar.
+            Jag behärskar grundläggande koncept som flexbox och grid för layout, samt att jag kan
+            använda media queries för att göra mina sidor mobilvänliga. Jag har också erfarenhet av att skapa anpassade
+            teman och använda CSS preprocessorer för att effektivisera min arbetsprocess.</p>
+        </div>
+        <div class="imgBox">
+          <img class="skillIMG" src="IMG/CSS3_logo.svg.png" alt="Bild på CSS-loggan.">
+        </div>
+      </div>
+      <div class="skillItem">
+        <div>
+          <h3>JavaScript</h3>
+          <p>Jag har en god förståelse för JavaScript och hur det används för att skapa dynamiska och interaktiva
+            webbsidor. Genom att använda JavaScript kan jag hantera händelser, manipulera DOM och implementera
+            funktionalitet som gör webbapplikationer mer användarvänliga. Jag är också bekant med moderna
+            JavaScript-ramverk och bibliotek, vilket gör att jag kan bygga komplexa applikationer med hjälp av
+            komponentbaserad utveckling.</p>
+        </div>
+        <div class="imgBox">
+          <img class="skillIMG" src="IMG/JavaScript-logo.png" alt="Bild på Javascript-loggan.">
+        </div>
+      </div>
+      <div class="skillItem">
+        <div>
+          <h3>Bootstrap</h3>
+          <p>Med Bootstrap har jag lärt mig att snabbt och effektivt skapa responsiva webbdesigns. Jag kan använda
+            Bootstrap-komponenter och verktyg för att bygga professionella och funktionella gränssnitt, vilket sparar
+            tid och resurser i utvecklingsprocessen. Genom att anpassa Bootstrap:s standardstilar kan jag noggrant
+            justera utseendet så att det matchar specifika designkrav, vilket resulterar i attraktiva och
+            användarvänliga webbplatser.</p>
+        </div>
+        <div class="imgBox">
+          <img class="skillIMG" src="IMG/Bootstrap_logo.svg.png" alt="Bild på Bootstrap-loggan.">
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloggposter och aside  -->
+    <div class="grid" id="news">
+      <article class="blogFirst">
+        <h2 class="blogHeader">Olle Wistedt tilldelas Nobelpris!</h2>
+        <img class="blogIMG" src="IMG/nobelpris2.JPG" alt="Bild på Olle Wistedt när han tar emot Nobelpriset.">
+        <p class="blogText">”Det här är ett ögonblick jag aldrig ens vågat drömma om,” sa en ödmjuk Wistedt i sitt tal,
+          där han tackade
+          sina kollegor och sin familj för deras stöd under hans karriär. Hans arbete anses vara en milstolpe inom
+          kvantfysiken och öppnar dörrar för nya teknologier som kan komma att förändra världen.</p>
+      </article>
+      <article class="blogSecond">
+        <h2 class="blogHeader">Ännu en Oscar för Wistedt!</h2>
+        <img class="blogIMG" src="IMG/oscar2.jpg" alt="Bild på Olle Wistedt när han mottar sin sjunde Oscar.">
+        <p class="blogText">”Det här priset är inte bara mitt, det tillhör alla som trodde på den här filmen,” sa han
+          medan publiken
+          applåderade. Hans innovativa regiteknik och förmåga att väva in komplexa mänskliga känslor i visuellt slående
+          berättelser har nu satt honom på världskartan som en av de mest talangfulla regissörerna i sin generation.</p>
+      </article>
+      <aside class="sidebar">
+        <h3 class="blogHeader">Tidigare Poster</h3>
+        <ul class="blogList">
+          <li><a href=#>Olle Wistedt skapar världsfred</a></li>
+          <li><a href=#>Olle Wistedt botar cancer</a></li>
+          <li><a href=#>Olle Wistedt har lärt sig flyga</a></li>
+          <li><a href=#>Olle Wistedt hittar liv på Mars</a></li>
+          <li><a href=#>Olle Wistedt är allmänt trevlig</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Kontaktformulär -->
+    <div class="formBox">
+      <form id="form">
+        <div class="formPadding">
+          <label for="name">Namn:</label><br>
+          <input type="text" id="name" name="name" placeholder="Ditt namn"><br>
+        </div>
+        <div class="formPadding">
+          <label for="email">E-mail:</label><br>
+          <input type="text" id="email" name="email" placeholder="Email"><br>
+        </div>
+        <div class="formPadding">
+          <label for="message">Skriv ditt meddelande här:</label><br>
+          <textarea id="message" rows="3"></textarea>
+          <a href="#" class="formButton">Skicka</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sidfot -->
+  <footer>
+    <div class="footerBox">
+      <div class="footerLeft">
+        <p class="textLeft">
+          Senast uppdaterad:<br>
+          27 september, 2024<br>
+        </p>
+        <p class="textLeft">
+          Copyright &copy; 2024: <br>
+          Olle Wistedt
+        </p>
+      </div>
+      <div class="footerCenter">
+        <div class="footerKaffe">
+          <h3>Vill du veta mer?</h3>
+          <p class="footerText">Sitter du på mer frågetecken än tidigare och vill höra direkt från mig<br>
+            - eller vill du kanske bara veta mer om något specifikt projekt?
+          </p>
+          <a href="mailto:wistedt@live.com" class="footerButton">Låt oss ta en kaffe!</a>
+        </div>
+        <!-- <div class="footerSocials">
+          <i class="fa-brands fa-square-facebook" style="color: #b1adbd;"></i>
+          <i class="fa-brands fa-linkedin" style="color: #b1adbd;"></i>
+          <i class="fa-brands fa-square-instagram" style="color: #b1adbd;"></i>
+          <i class="fa-brands fa-square-x-twitter" style="color: #b1adbd;"></i>
+        </div> -->
+      </div>
+      <div class="footerRight">
+        <h3>Kontakt:</h3>
+        <ul class="adress">
+          <li>Mail: <a href="mailto:wistedt@live.com">wistedt@live.com</a></li>
+          <li>Telefon: <a href="tel:+46723186401">0723 18 64 01</a></li>
+          <li>Adress: Ängelholmsgatan 8B <br>
+            MALMÖ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footerFoot">
+      <div class="footerSocials">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-square-x-twitter"></i>
+      </div>
+      <!-- <p class="textLeft">Senast uppdaterad:<br>
+        27 september, 2024</p>
+      <p class="textRight">Copyright &copy; 2024: <br>
+        Olle Wistedt</p> -->
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
